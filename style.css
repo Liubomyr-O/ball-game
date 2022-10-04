@@ -1,0 +1,98 @@
+.game {
+    margin: 100px;
+}
+
+.gameArea {
+    width: 700px;
+    height: 200px;
+    border-bottom: 15px solid #a5b611;
+    margin: auto;
+    background: linear-gradient( #c5e8ff, #ffffff)
+}
+
+.controlPanel {
+    width: 700px;
+    height: 100px;
+    background-color: rgb(224, 228, 189);
+    margin:auto;
+}
+
+.jump {
+    animation: ballJamp 0.6s linear;
+}
+
+.hide {
+    display: none;
+}
+
+.buttonIsAviable {
+    display: inline-block;
+}
+
+#ball {
+    width: 60px;
+    height: 80px;
+    background-image: url(img/ball.gif);
+    background-size: 60px 80px;
+    position: relative;
+    top: 135px;
+    left: 20px;
+    z-index: 4;
+}
+
+#net {
+    width: 40px;
+    height: 50px;
+    background-image: url(img/Tennis-net.png);
+    background-size: 40px 50px;
+    position: relative;
+    top: 82px;
+    left: 660px;
+    animation: netMove 2s infinite linear;
+    z-index: 6;
+}
+
+#button {
+    border: none;
+    height: 40px;
+    position: relative;
+    color: white;
+    background: #a5b611;
+    border-radius: 8px;
+    padding: 11px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 28px;
+    margin-left: 270px;
+    cursor: pointer;
+}
+
+@keyframes netMove {
+    0% {
+        left: 660px;
+
+    }
+    100% {
+        left: 0px;
+    }
+}
+
+@keyframes ballJamp {
+    0% {
+        top: 135px;
+    }
+    40% {
+        top: 55px;
+    }
+    50% {
+        top: 60px;
+    }
+    60% {
+        top: 55px;
+    }
+
+    100% {
+        top: 135px;
+    }
+}
